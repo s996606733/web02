@@ -1,0 +1,23 @@
+$color:#776B5D;
+
+header {
+    background-color: #EBE3D5;
+    width: 100%;
+    padding: 1rem;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+        line-height: 1.5em;
+        margin-bottom: 2px;
+        color: $color;
+
+        i {
+            font-size: 2.5rem;
+        }
+    }
+    p{
+        color:#8b7d6d;
+        font-weight: bolder;
+    }
+}

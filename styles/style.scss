@@ -1,0 +1,233 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "LXGW WenKai TC", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+$color:#776B5D;
+// 變數用法需放在要套用的值上面
+@import "./header";
+@import "./nav";
+// @mixin 可用變數 也可使用內元件
+@mixin flexbox($flex-direction:row,$flex-wrap:wrap,$flexbasis:100px){
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    div{
+        flex-basis: $flexbasis;
+    }
+}
+
+
+
+section.container{
+    display: flex;
+    section.left{
+        padding: 1rem;
+    }
+    section.right{
+        padding: 1rem;
+        h5{
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        p{
+            margin-bottom: 0.5rem;
+        }
+        iframe{
+            border: 5px solid #B0A695;
+            border-radius: 5px;
+        }
+        div.link1{
+            @include flexbox();
+        }
+
+        // 有預設的值的情況如要更動所有值都要填入
+        div.link2{
+            @include flexbox(column, nowrap, 50px);
+        }
+    }
+}
+
+section.agri{
+    margin: 30px;
+    p {
+        line-height: 1.5em;
+        font-weight: 500;
+    }
+    ol{
+        list-style-type:decimal;
+        margin-left: 20px;
+    }
+    ul{
+        list-style-type: disc;
+    }
+    h2{
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+}
+
+section {
+    video{
+        margin: 10px;
+    }
+    h4{
+        font-size: 10em;
+        color: green;
+        float: left;
+        &:hover{
+            color: red;
+            transform:translateY(600px) rotate(360deg);
+            transition: all 5s ease 0s, transform 3s ease 0s;
+        }
+    }
+    
+    }
+
+
+.content{
+    float: left;
+    margin: 30px;
+}
+
+div a{
+    $width:500px;
+    width: $width/2;
+    font: 16px/10px;
+    height: (250px/2);
+    margin-left: 10px+8px/2px;
+}
+

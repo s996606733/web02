@@ -1,0 +1,27 @@
+nav{
+    background-color: $color;
+    ul{
+        display: flex;
+        padding-left: 1rem;
+        li{
+            padding: 0.5rem 0.75rem;
+            a {
+                text-decoration: none;
+                color: #F3EEEA;
+                i{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    -webkit-transition: opacity 1s ease 0s;
+	-moz-transition: opacity 1s ease 0s;
+	-ms-transition: opacity 1s ease 0s;
+	-o-transition: opacity 1s ease 0s;
+	transition: opacity 1s ease 0s;
+    &:hover{
+        -webkit-opacity:0.5;
+        -mov-opacity:0.5;
+        opacity:0.5;
+    }
+}
